@@ -7,11 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <style type="text/tailwindcss">
-    @layer utilities {
-    
-    }
-  </style>
 
   <title>A Basic form with validation</title>
   <meta name="description" content="A Basic form with validation">
@@ -30,7 +25,48 @@
 <body>
   <!-- your content here... -->
 
-  📝
+
+  <div class="box-login">
+    <h2>Incrivez-vous</h2>
+    <form action="">
+
+      <div class="form-groupe">
+        <label for="utilisateur">Nom d'utilisateur</label>
+        <input type="text" placeholder="Nom d'utilisateur" id="utilisateur" maxlength="24">
+        <img src="ressources/check.svg" alt="validation" class="icone-verif">
+        <span class="message-alerte">Choissisez un pseudo entre 3 et 24 caractères</span>
+      </div>
+
+      <div class="form-groupe">
+        <label for="email">Entrez votre email</label>
+        <input type="email" placeholder="Votre email" id="email" maxlength="24">
+        <img src="ressources/check.svg" alt="validation" class="icone-verif">
+        <span class="message-alerte">Entrez un email valide</span>
+      </div>
+
+      <div class="form-groupe">
+        <label for="email">Mot de passe</label>
+        <input type="password" placeholder="Mot de passe" id="mdp" maxlength="24">
+        <img src="ressources/check.svg" alt="validation" class="icone-verif">
+        <span class="message-alerte">Un symbole, une lettre majuscule, un chiffre</span>
+        <div class="ligne">
+          <div class="l1">Faible</div>
+          <div class="l2">Moyen</div>
+          <div class="l3">Fort</div>
+        </div>
+      </div>
+
+
+      <div class="form-groupe">
+        <label for="mdpconf">Confirmer le mot de passe</label>
+        <input type="password" placeholder="Votre email" id="mdpconf" maxlength="24">
+        <img src="ressources/check.svg" alt="validation" class="icone-verif">
+      </div>
+
+      <button type="submit">création de compte</button>
+    </form>
+
+  </div>
 
   <script src="app.js"></script>
 </body>
